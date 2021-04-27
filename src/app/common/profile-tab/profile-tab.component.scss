@@ -1,0 +1,18 @@
+@import "../../app.component.scss";
+
+.box{
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+.text{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.rb{
+    border-right: 1px solid $main-dark-bg-color;
+}

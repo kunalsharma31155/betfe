@@ -1,0 +1,117 @@
+<div class="fullpage">
+    <section class="container-fluid">
+        <section class="row justify-content-center">
+            <section class="col-sm-6 col-md-4">
+                <form class="form-container" [formGroup]="userForm" (ngSubmit)="registerUser()">
+                <h4 class="text-center font-weight-bold mb-3 heading"> REGISTER </h4>
+                <img src="../../../assets/images/logo.png" class="img-fluid logo">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" formControlName="firstName"
+                            [ngClass]="{ 'is-invalid': formSubmitted && f.firstName.errors }" aria-describeby="firstName" placeholder="First Name">
+                        <div *ngIf="formSubmitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" formControlName="lastName"
+                            [ngClass]="{ 'is-invalid': formSubmitted && f.lastName.errors }" aria-describeby="lastName" placeholder="Last Name">
+                        <div *ngIf="formSubmitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="InputEmail1">Email or Username</label>
+                    <input type="text" class="form-control" formControlName="email"
+                        [ngClass]="{ 'is-invalid': formSubmitted && f.email.errors }" aria-describeby="emailHelp" placeholder="Email or Username">
+                    <div *ngIf="formSubmitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email or User Id is required</div>
+                        <!-- <div *ngIf="f.email.errors.pattern">Enter Valid Email</div> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <label for="countryCode">Code</label>
+                        <input type="text" class="form-control" formControlName="countryCode"
+                            [ngClass]="{ 'is-invalid': formSubmitted && f.countryCode.errors }" aria-describeby="countryCode" placeholder="+1">
+                        <div *ngIf="formSubmitted && f.countryCode.errors" class="invalid-feedback">
+                            <div *ngIf="f.countryCode.errors.required">Country Code is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="phoneNo">Phone Number</label>
+                        <input type="text" class="form-control" formControlName="phoneNo"
+                            [ngClass]="{ 'is-invalid': formSubmitted && f.phoneNo.errors }" aria-describeby="phoneNo" placeholder="Phone Number">
+                        <div *ngIf="formSubmitted && f.phoneNo.errors" class="invalid-feedback">
+                            <div *ngIf="f.phoneNo.errors.required">Phone Number is required</div>
+                            <div *ngIf="f.email.errors.pattern">Enter Valid Email</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date Of Birth</label>
+                    <input type="date" class="form-control" formControlName="dateOfBirth"
+                        [ngClass]="{ 'is-invalid': formSubmitted && f.dateOfBirth.errors }" aria-describeby="dateOfBirth" placeholder="Date Of Birth">
+                    <div *ngIf="formSubmitted && f.dateOfBirth.errors" class="invalid-feedback">
+                        <div *ngIf="f.dateOfBirth.errors.required">Date Of Birth is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <label for="password">Password</label>
+                            <input [type]="showPassword ? 'text' : 'password'" class="form-control password-type"
+                            style="border-right:none;"
+                            formControlName="password" [ngClass]="{ 'is-invalid': formSubmitted && f.password.errors }" placeholder="Password">
+                        </div>
+                        <div class="col-md-1 mt-2">
+                            <label for="password"></label>
+                            <button type="button" class="password-type bg-transparent" (click)="togglePassword()"
+                            style="float: right; padding : 6px 12px; border: 1px solid #ced4da;
+                            border-left: none; border-radius: 0.25rem; outline:none;">
+                                <i [class]="showPassword ? 'fa fa-eye' : 'fa fa-eye-slash'" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div *ngIf="formSubmitted && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.pattern">Enter Strong Password</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                  <div class="col-md-11">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input [type]="showConfirmPassword ? 'text' : 'password'" class="form-control password-type"
+                    style="border-right: none;" formControlName="confirmPassword"
+                    [ngClass]="{ 'is-invalid': formSubmitted && f.confirmPassword.errors }" placeholder="Confirm Password">
+                  </div>
+                  <div class="col-md-1 mt-2">
+                    <label for="confirmPassword"></label>
+                    <button type="button" class="password-type bg-transparent" (click)="toggleConfirmPassword()"
+                    style="float: right; padding : 6px 12px; border: 1px solid #ced4da;
+                    border-left: none; border-radius: 0.25rem; outline:none;">
+                        <i [class]="showConfirmPassword ? 'fa fa-eye' : 'fa fa-eye-slash'" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  </div>
+                    <div *ngIf="formSubmitted && f.confirmPassword.errors" style="color: red;">
+                        <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                        <div *ngIf="f.confirmPassword.errors.mustMatch">Password and Confirm Password must match with each other.</div>
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be 8 character long</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-custom btn-block button">Submit</button>
+                <div class="form-footer text-center mt-4 background">
+                    <p routerLink="/user">Log In</p>
+                </div>
+                </form>
+            </section>
+        </section>
+    </section>
+    </div>
+    

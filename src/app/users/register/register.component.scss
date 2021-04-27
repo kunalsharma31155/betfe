@@ -1,0 +1,40 @@
+@import "../../app.component.scss";
+.fullpage {
+  background: #17002b;
+//   padding-top: 25vh;
+//   background-image: url("../../../assets/img/br.jpg");
+}
+.heading{
+   color: #360064;
+}
+.button{
+    color: white;
+    font-weight: 500;
+    background-color: #360064;
+}
+form {
+  background: #fff;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+}
+/* set padding and size of th form */
+.form-container {
+  border-radius: 10px;
+  padding: 30px;
+}
+label {
+  color: grey;
+  font-weight: 500;
+}
+.background {
+  // background-color: $main-font-color;
+  color: #360064;
+}
+.logo{
+  max-height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 20%;
+}

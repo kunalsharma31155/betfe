@@ -1,0 +1,10 @@
+@import "../../app.component.scss";
+
+.bg{
+    background-color: $main-dark-bg-color;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
