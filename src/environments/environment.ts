@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   name: "(DEV)",
-  apiBaseUrl: "https://kunalsharma31155-bet.zeet.app"
+  apiBaseUrl: "https://betbe.herokuapp.com"
 };
 
 /*

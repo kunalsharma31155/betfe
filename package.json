@@ -4,11 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start":"ng serve",
     "heroku-postbuild": "ng build --prod"
   },
   "private": true,
@@ -23,8 +22,10 @@
     "@angular/router": "~8.2.14",
     "@auth0/angular-jwt": "^5.0.2",
     "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "ngx-toastr": "^10.0.4",
+    "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
