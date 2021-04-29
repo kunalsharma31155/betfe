@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './category.component';
+import { SignleMatchComponent } from './signle-match.component';
 
 import { DashboardsModule } from '../../dashboards/dashboards.module';
 
@@ -11,4 +11,4 @@ import { DashboardsModule } from '../../dashboards/dashboards.module';
     DashboardsModule
   ]
 })
-export class CategoryModule { }
+export class SignleMatchModule { }

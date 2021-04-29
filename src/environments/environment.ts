@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   name: "(DEV)",
   apiBaseUrl: "https://betbe.herokuapp.com"
+  // apiBaseUrl: "http://localhost:5000"
 };
 
 /*

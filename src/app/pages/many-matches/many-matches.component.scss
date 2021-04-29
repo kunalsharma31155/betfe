@@ -1,0 +1,54 @@
+@import "../../app.component.scss";
+
+.box{
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-bottom: 30px;
+    min-height: 100vh;
+}
+
+.text{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+.main-head{
+    color: white;
+}
+.head{
+    margin-top: 15vh;
+}
+.small-box{
+    border-radius: 20px;
+    width: 100%;
+    box-shadow: 4px 0px 54px -7px rgb(0 0 0 / 76%);
+    -webkit-box-shadow: 4px 0px 54px -7px rgb(0 0 0 / 76%);
+    -moz-box-shadow: 4px 0px 54px -7px rgba(0,0,0,0.76);
+    cursor: pointer;
+    padding: 20px;
+}
+.small-box:hover{
+    background-color: $main-dark-bg-color;
+}
+.line{
+    font-weight: 600;
+    margin-bottom: -20px;
+}
+.teams{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.im{
+    max-height: 100px;
+}
+.btn{
+    color:white;
+    font-size: 500;
+    border-radius: 20px;
+}
+.btn:hover{
+    background-color: $main-dark-bg-color;
+}

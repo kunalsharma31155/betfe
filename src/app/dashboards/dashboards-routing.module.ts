@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard } from '../guards/auth.guard';
-import { DashComponent } from '../dashboards/dash/dash.component';
+import { CategoryComponent } from '../common/category/category.component';
+import { ManyMatchesComponent } from '../pages/many-matches/many-matches.component';
+import { SignleMatchComponent } from '../pages/signle-match/signle-match.component';
 
 const routes: Routes = [
   {
     path : '',
-    component : DashComponent
+    component : CategoryComponent
+  },
+  {
+    path: 'matches/:game',
+    component : ManyMatchesComponent
+  },
+  {
+    path: 'match/:teams',
+    component : SignleMatchComponent
   },
   {
     path : '**',

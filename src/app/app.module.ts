@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpConfigInterceptor } from './interceptor/httpconfig.interceptor';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ const modules = [
   HttpClientModule,
   BrowserModule,
   AppRoutingModule,
+  BrowserAnimationsModule,
   ToastrModule.forRoot({
     positionClass: 'toast-top-right'
   }),

@@ -11,10 +11,24 @@
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-8">
-                            <div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> 29th January,2021</div>
-                            <img src="../../../assets/images/logo-01.jpg" class="img-fluid">
-                            <div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> 29th January,2021</div>
-                            <img src="../../../assets/images/logo-01.jpg" class="img-fluid">
+                            <div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{smatches[0].commence_time | date: 'MMMM d, y'}}</div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{smatches[0].teams[0]}}.png" class="img-fluid im">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{smatches[0].teams[1]}}.png" class="img-fluid im">
+                                </div>
+                            </div>
+                            <div class="date mt-4"><i class="fa fa-clock-o" aria-hidden="true"></i> {{smatches[1].commence_time | date: 'MMMM d, y'}}</div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{smatches[1].teams[0]}}.png" class="img-fluid im">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{smatches[1].teams[1]}}.png" class="img-fluid im">
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-2">
                         </div>
@@ -24,10 +38,24 @@
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-8">
-                            <div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> 29th January,2021</div>
-                            <img src="../../../assets/images/logo-01.jpg" class="img-fluid">
-                            <div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> 29th January,2021</div>
-                            <img src="../../../assets/images/logo-01.jpg" class="img-fluid">
+                            <div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> {{bmatches[0].commence_time | date: 'MMMM d, y'}}</div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{bmatches[0].teams[0]}}.png" class="img-fluid im">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{bmatches[0].teams[1]}}.png" class="img-fluid im">
+                                </div>
+                            </div>
+                            <div class="date mt-4"><i class="fa fa-clock-o" aria-hidden="true"></i> {{bmatches[1].commence_time | date: 'MMMM d, y'}}</div>
+                            <div class="row mt-2">
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{bmatches[1].teams[0]}}.png" class="img-fluid im">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../../../assets/logos/{{bmatches[1].teams[1]}}.png" class="img-fluid im">
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-2">
                         </div>

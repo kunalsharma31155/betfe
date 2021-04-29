@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './category.component';
+import { ManyMatchesComponent } from './many-matches.component';
 
 import { DashboardsModule } from '../../dashboards/dashboards.module';
+
 
 @NgModule({
   declarations: [],
@@ -11,4 +12,4 @@ import { DashboardsModule } from '../../dashboards/dashboards.module';
     DashboardsModule
   ]
 })
-export class CategoryModule { }
+export class ManyMatchesModule { }
